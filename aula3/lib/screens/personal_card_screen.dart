@@ -2,8 +2,10 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import '../widget/my_buttom.dart';
 
-class MyHomePage extends StatelessWidget {
-  const MyHomePage({super.key});
+class PersonalCardScreen extends StatelessWidget {
+  static const String id = 'personal_card_screen';
+
+  const PersonalCardScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

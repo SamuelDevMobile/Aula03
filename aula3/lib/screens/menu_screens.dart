@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class MenuScreen extends StatelessWidget {
+  static const String id = 'menu_screen';
+
   const MenuScreen({super.key});
 
   @override
@@ -22,18 +24,23 @@ class MenuScreen extends StatelessWidget {
               height: 16,
               width: double.infinity,
             ),
-            Material(
-              color: Colors.teal,
-              borderRadius: BorderRadius.circular(1000),
-              child: const Padding(
-                padding: EdgeInsets.symmetric(vertical: 16, horizontal: 32),
-                child: Text(
-                  'Cartão pessoal',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white),
+            InkWell(
+              onTap: () {
+                Navigator.pushNamed(context, 'personal_card_screen');
+              },
+              child: Material(
+                color: Colors.teal,
+                borderRadius: BorderRadius.circular(1000),
+                child: const Padding(
+                  padding: EdgeInsets.symmetric(vertical: 16, horizontal: 32),
+                  child: Text(
+                    'Cartão pessoal',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white),
+                  ),
                 ),
               ),
             ),
