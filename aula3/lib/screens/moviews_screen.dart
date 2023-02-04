@@ -26,51 +26,61 @@ class _MovieScreenState extends State<MovieScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: ListView.separated(
-          padding: EdgeInsets.symmetric(horizontal: 16),
-          itemCount: movieList.length,
-          separatorBuilder: (_, __) => const SizedBox(height: 16),
-          itemBuilder: (_, index) {
-            final movie = movieList[index];
-            return Material(
-              elevation: 4,
-              borderRadius: BorderRadius.circular(16),
-              child: SizedBox(
-                height: 140,
-                child: Row(
-                  children: [
-                    Expanded(
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: ListView.separated(
+            padding: EdgeInsets.symmetric(horizontal: 16),
+            itemCount: movieList.length,
+            separatorBuilder: (_, __) => const SizedBox(height: 16),
+            itemBuilder: (_, index) {
+              final movie = movieList[index];
+              return Material(
+                elevation: 4,
+                borderRadius: BorderRadius.circular(16),
+                child: SizedBox(
+                  height: 140,
+                  child: Row(
+                    children: [
+                      Expanded(
                         child: ClipRRect(
-                      borderRadius: const BorderRadius.only(
-                          topLeft: Radius.circular(16),
-                          bottomLeft: Radius.circular(16)),
-                      child: Image.network(movie.image, fit: BoxFit.cover),
-                    )),
-                    const SizedBox(width: 16),
-                    Expanded(
-                      flex: 2,
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            movie.title,
-                            style: const TextStyle(
-                                fontSize: 16, fontWeight: FontWeight.bold),
+                          borderRadius: const BorderRadius.only(
+                            topLeft: Radius.circular(16),
+                            bottomLeft: Radius.circular(16),
                           ),
-                          const SizedBox(height: 16),
-                          Text(
-                            movie.description,
-                            overflow: TextOverflow.ellipsis,
-                            maxLines: 5,
+                          child: Image.network(
+                            movie.image,
+                            fit: BoxFit.cover,
                           ),
-                        ],
+                        ),
                       ),
-                    ),
-                  ],
+                      const SizedBox(width: 16),
+                      Expanded(
+                        flex: 2,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              movie.title,
+                              style: const TextStyle(
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                            const SizedBox(height: 16),
+                            Text(
+                              movie.description,
+                              overflow: TextOverflow.ellipsis,
+                              maxLines: 5,
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
-              ),
-            );
-          },
+              );
+            },
+          ),
         ),
       ),
     );
