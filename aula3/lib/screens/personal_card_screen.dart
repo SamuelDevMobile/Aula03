@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import '../widget/my_buttom.dart';
 
 class PersonalCardScreen extends StatelessWidget {
-  static const String id = 'personal_card_screen';
+  static const String id = '/personal_card_screen';
 
   const PersonalCardScreen({super.key});
 
