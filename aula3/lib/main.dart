@@ -1,5 +1,6 @@
 import 'package:aula3/screens/menu_screens.dart';
 import 'package:aula3/screens/challengeone.dart';
+import 'package:aula3/screens/moviews_screen.dart';
 import 'package:aula3/screens/personal_card_screen.dart';
 import 'package:aula3/screens/quiz/finished_quis_screen.dart';
 import 'package:aula3/screens/quiz/quiz_screen.dart';
@@ -29,6 +30,7 @@ class MyApp extends StatelessWidget {
         FinishedQuizScreen.id: (context) => FinishedQuizScreen(
           arguments: ModalRoute.of(context)?.settings.arguments as FinishedQuizScreenArguments
         ),
+        MovieScreen.id: (context) => const MovieScreen(),
       },
     );
   }
