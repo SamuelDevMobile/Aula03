@@ -1,4 +1,5 @@
 import 'package:aula3/screens/menu_screens.dart';
+import 'package:aula3/screens/challengeone.dart';
 import 'package:aula3/screens/personal_card_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -15,12 +16,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.teal,
       ),
       initialRoute: MenuScreen.id,
       routes: {
         MenuScreen.id: (context) => const MenuScreen(),
-        PersonalCardScreen.id: (context) => const PersonalCardScreen(),
+        ChallengeOne.id: (context) => const ChallengeOne(),
       },
     );
   }
