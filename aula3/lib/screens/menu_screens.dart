@@ -1,4 +1,5 @@
 import 'package:aula3/screens/personal_card_screen.dart';
+import 'package:aula3/screens/quiz/quiz_screen.dart';
 import 'package:aula3/widget/rounded_button.dart';
 import 'package:flutter/material.dart';
 import 'challengeone.dart';
@@ -34,6 +35,8 @@ class MenuScreen extends StatelessWidget {
                   RoundedButton(id: PersonalCardScreen.id, text: "Cartão Postal"),
                   SizedBox(width: 16, height: 16),
                   RoundedButton(id: ChallengeOne.id, text: "Desafio Dado"),
+                  SizedBox(width: 16, height: 16),
+                  RoundedButton(id: QuizScreen.id, text: "Quiz"),
                 ],
               ),
             ),
