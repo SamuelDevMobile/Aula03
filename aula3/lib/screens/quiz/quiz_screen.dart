@@ -17,13 +17,39 @@ class QuizScreen extends StatefulWidget {
 List<QuestionModel> loadQuestion() {
   return [
     QuestionModel(
-        question: 'Que cor é o ceu ?', options: ['verde', 'lilaz'], answer: 1),
+        question: 'Qual é o país que mais produz café no mundo?',
+        options: ['Canadá', 'Índia', 'Argentina', 'Brasil', 'Etiópia'],
+        answer: 3),
     QuestionModel(
-        question: 'Qual a cor do cavalo branco de napoleao',
-        options: ['preto', 'marrom', 'branco'],
-        answer: 2),
+        question: 'País conhecido por ser o mais fechado do mundo?',
+        options: ['Myammar', 'Coréia do Norte', 'Armenia', 'Iêmen', 'Vietnã'],
+        answer: 1),
     QuestionModel(
-        question: 'Você gosta de leite', options: ['sim', 'não'], answer: 3)
+        question: 'País que possui a Groelândia como território?',
+        options: [
+          'Finlândia',
+          'Canadá',
+          'Reino Unido',
+          'Estados Unidos',
+          'Dinamarca'
+        ],
+        answer: 4),
+    QuestionModel(
+        question: 'País com a maior média de QI?',
+        options: ['China', 'Alemanha', 'Japão', 'Coreia do Sul', 'Noruega'],
+        answer: 3),
+    QuestionModel(
+        question: 'País com maior IDH?',
+        options: ['África', 'Ásia', 'Oceânia'],
+        answer: 0),
+    QuestionModel(
+        question: 'Continente menos industrializado?',
+        options: ['Noruega', 'Reino Unido', 'Canadá', 'Holanda', 'México'],
+        answer: 0),
+    QuestionModel(
+        question: 'País com maior comunidade japonesa fora do Japão?',
+        options: ['Estados Unidos', 'Brasil', 'Coreia do Sul'],
+        answer: 1)
   ];
 }
 
@@ -38,7 +64,7 @@ class _QuizScreenState extends State<QuizScreen> {
     questions = loadQuestion();
   }
 
-  void onOptionPressed(int selectOption)  {
+  void onOptionPressed(int selectOption) {
     final currentQuestion = questions[questionIndex];
 
     if (selectOption == currentQuestion.answer) {
@@ -51,8 +77,8 @@ class _QuizScreenState extends State<QuizScreen> {
   void goToNextQuestion() {
     if (questionIndex == questions.length - 1) {
       Navigator.pushReplacementNamed(
-          context,
-          FinishedQuizScreen.id,
+        context,
+        FinishedQuizScreen.id,
         arguments: FinishedQuizScreenArguments(score: score),
       );
     } else {
@@ -80,16 +106,14 @@ class _QuizScreenState extends State<QuizScreen> {
                   itemCount: currentQuestion.options.length,
                   shrinkWrap: true,
                   separatorBuilder: (context, index) =>
-                  const SizedBox(height: 10),
+                      const SizedBox(height: 10),
                   itemBuilder: (context, index) {
                     return QuestionButton(
                         text: currentQuestion.options[index],
                         onPressed: () {
                           onOptionPressed(index);
-                        }
-                    );
-                  }
-              ),
+                        });
+                  }),
             ],
           ),
         ),
@@ -97,4 +121,3 @@ class _QuizScreenState extends State<QuizScreen> {
     );
   }
 }
-
