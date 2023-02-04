@@ -15,6 +15,7 @@ class PersonalCardScreen extends StatelessWidget {
 
     return Scaffold(
       backgroundColor: Colors.teal,
+      appBar: AppBar(),
       body: SafeArea(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

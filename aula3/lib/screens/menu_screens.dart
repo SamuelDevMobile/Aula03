@@ -1,3 +1,4 @@
+import 'package:aula3/screens/personal_card_screen.dart';
 import 'package:flutter/material.dart';
 
 class MenuScreen extends StatelessWidget {
@@ -26,7 +27,7 @@ class MenuScreen extends StatelessWidget {
             ),
             InkWell(
               onTap: () {
-                Navigator.pushNamed(context, 'personal_card_screen');
+                Navigator.pushNamed(context, PersonalCardScreen.id);
               },
               child: Material(
                 color: Colors.teal,
