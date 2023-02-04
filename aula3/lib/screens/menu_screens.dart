@@ -26,45 +26,52 @@ class MenuScreen extends StatelessWidget {
               height: 16,
               width: double.infinity,
             ),
-            InkWell(
-              onTap: () {
-                Navigator.pushNamed(context, PersonalCardScreen.id);
-              },
-              child: Material(
-                color: Colors.teal,
-                borderRadius: BorderRadius.circular(1000),
-                child: const Padding(
-                  padding: EdgeInsets.symmetric(vertical: 16, horizontal: 32),
-                  child: Text(
-                    'Cartão pessoal',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white),
+            IntrinsicWidth(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: [
+                  InkWell(
+                    onTap: () {
+                      Navigator.pushNamed(context, PersonalCardScreen.id);
+                    },
+                    child: Material(
+                      color: Colors.teal,
+                      borderRadius: BorderRadius.circular(1000),
+                      child: const Padding(
+                        padding: EdgeInsets.symmetric(vertical: 16, horizontal: 32),
+                        child: Text(
+                          'Cartão pessoal',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white),
+                        ),
+                      ),
+                    ),
                   ),
-                ),
-              ),
-            ),
-            const SizedBox(width: 16, height: 16),
-            InkWell(
-              onTap: () {
-                Navigator.pushNamed(context, ChallengeOne.id);
-              },
-              child: Material(
-                color: Colors.teal,
-                borderRadius: BorderRadius.circular(1000),
-                child: const Padding(
-                  padding: EdgeInsets.symmetric(vertical: 16, horizontal: 32),
-                  child: Text(
-                    'Desafio dado',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white),
+                  const SizedBox(width: 16, height: 16),
+                  InkWell(
+                    onTap: () {
+                      Navigator.pushNamed(context, ChallengeOne.id);
+                    },
+                    child: Material(
+                      color: Colors.teal,
+                      borderRadius: BorderRadius.circular(1000),
+                      child: const Padding(
+                        padding: EdgeInsets.symmetric(vertical: 16, horizontal: 32),
+                        child: Text(
+                          'Desafio dado',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white),
+                        ),
+                      ),
+                    ),
                   ),
-                ),
+                ],
               ),
             ),
           ],
