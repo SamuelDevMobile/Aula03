@@ -20,7 +20,8 @@ class _ChallengeOneState extends State<ChallengeOne> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.red,
+      appBar: AppBar(),
+      backgroundColor: Colors.teal,
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(8.0),
