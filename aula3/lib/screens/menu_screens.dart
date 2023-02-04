@@ -1,6 +1,5 @@
 import 'package:aula3/screens/personal_card_screen.dart';
 import 'package:flutter/material.dart';
-
 import 'challengeone.dart';
 
 class MenuScreen extends StatelessWidget {
@@ -29,7 +28,7 @@ class MenuScreen extends StatelessWidget {
             ),
             InkWell(
               onTap: () {
-                Navigator.pushNamed(context, ChallengeOne.id);
+                Navigator.pushNamed(context, PersonalCardScreen.id);
               },
               child: Material(
                 color: Colors.teal,
@@ -38,6 +37,27 @@ class MenuScreen extends StatelessWidget {
                   padding: EdgeInsets.symmetric(vertical: 16, horizontal: 32),
                   child: Text(
                     'Cartão pessoal',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white),
+                  ),
+                ),
+              ),
+            ),
+            const SizedBox(width: 16, height: 16),
+            InkWell(
+              onTap: () {
+                Navigator.pushNamed(context, ChallengeOne.id);
+              },
+              child: Material(
+                color: Colors.teal,
+                borderRadius: BorderRadius.circular(1000),
+                child: const Padding(
+                  padding: EdgeInsets.symmetric(vertical: 16, horizontal: 32),
+                  child: Text(
+                    'Desafio dado',
                     textAlign: TextAlign.center,
                     style: TextStyle(
                         fontSize: 16,

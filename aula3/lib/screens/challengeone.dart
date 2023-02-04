@@ -1,5 +1,4 @@
 import 'dart:math';
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -12,12 +11,11 @@ class ChallengeOne extends StatefulWidget {
   State<StatefulWidget> createState() => _ChallengeOneState();
 }
 
-class _ChallengeOneState extends State<ChallengeOne> {
-  static const maxValue = 6;
-  static final random = Random();
+String randomNumber() => (Random().nextInt(6) + 1).toString();
 
-  var number1 = random.nextInt(maxValue) + 1;
-  var number2 = random.nextInt(maxValue) + 1;
+class _ChallengeOneState extends State<ChallengeOne> {
+  var number1 = randomNumber();
+  var number2 = randomNumber();
 
   @override
   Widget build(BuildContext context) {
@@ -35,7 +33,7 @@ class _ChallengeOneState extends State<ChallengeOne> {
                   child: InkWell(
                       onTap: () {
                         setState(() {
-                          number1 = random.nextInt(maxValue);
+                          number1 = randomNumber();
                         });
                       },
                       child:
@@ -46,7 +44,7 @@ class _ChallengeOneState extends State<ChallengeOne> {
                     child: InkWell(
                         onTap: () {
                           setState(() {
-                            number2 = random.nextInt(maxValue);
+                            number2 = randomNumber();
                           });
                         },
                         child: Image.asset(

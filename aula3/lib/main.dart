@@ -21,6 +21,7 @@ class MyApp extends StatelessWidget {
       initialRoute: MenuScreen.id,
       routes: {
         MenuScreen.id: (context) => const MenuScreen(),
+        PersonalCardScreen.id: (context) => const PersonalCardScreen(),
         ChallengeOne.id: (context) => const ChallengeOne(),
       },
     );
