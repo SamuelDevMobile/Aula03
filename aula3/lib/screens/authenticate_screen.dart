@@ -54,8 +54,8 @@ class _AuthenticateScreenState extends State<AuthenticateScreen> {
                     child: Padding(
                       padding: const EdgeInsets.all(16),
                       child: Icon(obscurePassword
-                          ? Icons.visibility
-                          : Icons.visibility_off),
+                          ? Icons.visibility_off
+                          : Icons.visibility),
                     ),
                   ),
                 ),
