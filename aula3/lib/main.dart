@@ -32,7 +32,7 @@ class MyApp extends StatelessWidget {
           arguments: ModalRoute.of(context)?.settings.arguments as FinishedQuizScreenArguments
         ),
         MovieScreen.id: (context) => const MovieScreen(),
-        AuthenticateScreen.id: (context) => AuthenticateScreen(),
+        AuthenticateScreen.id: (context) => const AuthenticateScreen(),
       },
     );
   }
