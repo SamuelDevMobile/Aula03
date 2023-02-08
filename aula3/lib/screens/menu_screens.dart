@@ -1,3 +1,4 @@
+import 'package:aula3/screens/authenticate_screen.dart';
 import 'package:aula3/screens/moviews_screen.dart';
 import 'package:aula3/screens/personal_card_screen.dart';
 import 'package:aula3/screens/quiz/quiz_screen.dart';
@@ -40,6 +41,8 @@ class MenuScreen extends StatelessWidget {
                   RoundedButton(id: QuizScreen.id, text: "Desafio - Quiz"),
                   SizedBox(width: 16, height: 16),
                   RoundedButton(id: MovieScreen.id, text: "Consumindo API"),
+                  SizedBox(width: 16, height: 16),
+                  RoundedButton(id: AuthenticateScreen.id, text: "Autenticacao"),
                 ],
               ),
             ),

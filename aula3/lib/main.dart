@@ -1,3 +1,4 @@
+import 'package:aula3/screens/authenticate_screen.dart';
 import 'package:aula3/screens/menu_screens.dart';
 import 'package:aula3/screens/challengeone.dart';
 import 'package:aula3/screens/moviews_screen.dart';
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.teal,
       ),
-      initialRoute: MenuScreen.id,
+      initialRoute: AuthenticateScreen.id,
       routes: {
         MenuScreen.id: (context) => const MenuScreen(),
         PersonalCardScreen.id: (context) => const PersonalCardScreen(),
@@ -31,6 +32,7 @@ class MyApp extends StatelessWidget {
           arguments: ModalRoute.of(context)?.settings.arguments as FinishedQuizScreenArguments
         ),
         MovieScreen.id: (context) => const MovieScreen(),
+        AuthenticateScreen.id: (context) => AuthenticateScreen(),
       },
     );
   }
